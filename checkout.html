@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Checkout</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/checkout.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="proizvodi.html">
+          <img src="images/slika.jpg" alt="logo">
+        </a>
+        <nav class="primary-nav" aria-label="Main navigation">
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="proizvodi.html">Shop</a></li>
+            <li><a href="login.html">About</a></li>
+          </ul>
+        </nav>
+        <form class="search-form" role="search">
+          <input class="search-input" type="search" placeholder="Search..." aria-label="Search">
+        </form>
+        <div class="header-actions">
+          <a class="icon-link" href="login.html">
+            <img src="images/user.svg" alt="User">
+          </a>
+          <a class="icon-link" href="checkout.html" onclick="openCart()">
+            <img src="images/cart.svg" alt="Cart">
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <main class="page">
+      <div class="container checkout-grid">
+        <div class="checkout-left">
+          <section class="card">
+            <h1>Checkout</h1>
+            <h2 class="section-title">Shipping Information</h2>
+            <form class="form-stack" action="#" method="post" novalidate aria-live="polite">
+              <div class="field-group">
+                <label for="firstname">First name</label>
+                <input type="text" id="firstname" name="firstname" required>
+              </div>
+              <div class="field-group">
+                <label for="lastname">Last name</label>
+                <input type="text" id="lastname" name="lastname" required>
+              </div>
+              <div class="field-group">
+                <label for="address">Address</label>
+                <input type="text" id="address" name="address">
+              </div>
+              <div class="field-group">
+                <label for="apartment">Apartment, suite, etc.</label>
+                <input type="text" id="apartment" name="apartment">
+              </div>
+              <div class="field-group">
+                <label for="country">Country</label>
+                <input type="text" id="country" name="country">
+              </div>
+              <div class="field-group">
+                <label for="city">City</label>
+                <input type="text" id="city" name="city">
+              </div>
+              <div class="field-group">
+                <label for="zipcode">Zip / Postal code</label>
+                <input type="text" id="zipcode" name="zipcode">
+              </div>
+              <label class="checkbox-row">
+                <input type="checkbox" id="save_contact" name="save_contact">
+                Save contact info
+              </label>
+              <button type="submit" class="btn btn-block">Save</button>
+            </form>
+          </section>
+
+          <section class="card">
+            <h2 class="section-title">Payment Information</h2>
+            <div class="button-row">
+              <button class="btn btn-outline" type="button">PayPal</button>
+              <button class="btn btn-outline" type="button">Cash</button>
+            </div>
+            <form class="form-stack" action="#" method="post" novalidate aria-live="polite">
+              <div class="field-group">
+                <label for="cardname">Cardholder name</label>
+                <input type="text" id="cardname" name="cardname">
+              </div>
+              <div class="field-group">
+                <label for="cardnumber">Card number</label>
+                <input type="text" id="cardnumber" name="cardnumber" inputmode="numeric" maxlength="19">
+              </div>
+              <div class="split-row">
+                <div class="field-group">
+                  <label for="expmonth">Exp. month</label>
+                  <input type="text" id="expmonth" name="expmonth" placeholder="MM">
+                </div>
+                <div class="field-group">
+                  <label for="expyear">Exp. year</label>
+                  <input type="text" id="expyear" name="expyear" placeholder="YY">
+                </div>
+                <div class="field-group">
+                  <label for="cvc">CVC</label>
+                  <input type="text" id="cvc" name="cvc" placeholder="CVC">
+                </div>
+              </div>
+              <button type="submit" class="btn btn-block">Pay</button>
+            </form>
+          </section>
+        </div>
+
+        <aside class="card checkout-summary">
+          <h2 class="section-title">Review your cart</h2>
+          <div class="order-item">
+            <img src="images/dress.jpg" alt="Red dress">
+            <div class="order-meta">
+              <div class="order-name">Red Dress</div>
+              <div class="order-qty">Qty: 1</div>
+            </div>
+            <div class="order-price">€49.99</div>
+          </div>
+          <div class="order-item">
+            <img src="images/jacket.jpg" alt="Leather jacket">
+            <div class="order-meta">
+              <div class="order-name">Leather Jacket</div>
+              <div class="order-qty">Qty: 1</div>
+            </div>
+            <div class="order-price">€89.99</div>
+          </div>
+          <form class="promo-form" action="#" method="post">
+            <input type="text" id="promo-input" name="promo" placeholder="Add promo code" aria-label="Add promo code">
+            <button type="button" class="btn" onclick="applyPromoCode()">Apply</button>
+          </form>
+          <div class="order-total">
+            <span>Total</span>
+            <span>€139.98</span>
+          </div>
+        </aside>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <section>
+          <h4>Shop</h4>
+          <ul>
+            <li>Dresses</li>
+            <li>Jacket</li>
+            <li>Shoes</li>
+            <li>Skirt</li>
+            <li>Gift card</li>
+            <li>Sales & offers</li>
+          </ul>
+        </section>
+        <section>
+          <h4>Information</h4>
+          <ul>
+            <li>About</li>
+            <li>Terms of service</li>
+            <li>Privacy policy</li>
+            <li>Delivery and return</li>
+          </ul>
+        </section>
+        <section>
+          <h4>Customer support</h4>
+          <ul>
+            <li>Contact</li>
+            <li>Help</li>
+            <li>FAQ</li>
+          </ul>
+        </section>
+      </div>
+      <div class="container footer-bottom">
+        <p>2024 Your Company. All rights reserved.</p>
+        <div class="social-icons">
+          <img src="images/instagram.png" alt="Instagram">
+          <img src="images/communication.png" alt="Facebook">
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>
+
+
+
