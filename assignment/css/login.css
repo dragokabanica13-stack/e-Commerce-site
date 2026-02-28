@@ -1,0 +1,27 @@
+.login-card {
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+.login-title {
+  margin: 0 0 16px 0;
+  font-size: 1.6rem;
+}
+
+.form-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.95rem;
+}
+
+.remember {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.forgot-link {
+  color: #524438;
+  font-weight: 600;
+}

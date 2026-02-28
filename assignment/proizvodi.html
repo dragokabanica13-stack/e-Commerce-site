@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Online Shop - Products</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/proizvodi.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="proizvodi.html">
+          <img src="images/slika.jpg" alt="logo">
+        </a>
+        <nav class="primary-nav" aria-label="Main navigation">
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="proizvodi.html">Shop</a></li>
+            <li><a href="login.html">About</a></li>
+          </ul>
+        </nav>
+        <form class="search-form" role="search">
+          <input class="search-input" type="search" placeholder="Search..." aria-label="Search">
+        </form>
+        <div class="header-actions">
+          <a class="icon-link" href="login.html">
+            <img src="images/user.svg" alt="User">
+          </a>
+          <a class="icon-link" href="checkout.html" onclick="openCart()">
+            <img src="images/cart.svg" alt="Cart">
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <main class="page">
+      <div class="container">
+        <section class="products">
+          <h1 class="products-title">Our products</h1>
+          <div class="products-grid">
+            <article class="product-card">
+              <div class="product-image">
+                <img src="images/dress.jpg" alt="Red dress">
+              </div>
+              <h2 class="product-name">Red Summer Dress</h2>
+              <p class="product-price">$39.99</p>
+              <button class="btn product-btn" onclick="dodajNaIznos(39.99)">Add to cart</button>
+            </article>
+            <article class="product-card">
+              <div class="product-image">
+                <img src="images/jacket.jpg" alt="Black jacket">
+              </div>
+              <h2 class="product-name">Black Leather Jacket</h2>
+              <p class="product-price">$89.99</p>
+              <button class="btn product-btn" onclick="dodajNaIznos(89.99)">Add to cart</button>
+            </article>
+            <article class="product-card">
+              <div class="product-image">
+                <img src="images/sneakers.jpg" alt="White sneakers">
+              </div>
+              <h2 class="product-name">White Sneakers</h2>
+              <p class="product-price">$59.99</p>
+              <button class="btn product-btn" onclick="dodajNaIznos(59.99)">Add to cart</button>
+            </article>
+            <article class="product-card">
+              <div class="product-image">
+                <img src="images/blueskirt.jpg" alt="Blue skirt">
+              </div>
+              <h2 class="product-name">Blue Skirt</h2>
+              <p class="product-price">$29.99</p>
+              <button class="btn product-btn" onclick="dodajNaIznos(29.99)">Add to cart</button>
+            </article>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <section>
+          <h4>Shop</h4>
+          <ul>
+            <li>Dresses</li>
+            <li>Jacket</li>
+            <li>Shoes</li>
+            <li>Skirt</li>
+            <li>Gift card</li>
+            <li>Sales & offers</li>
+          </ul>
+        </section>
+        <section>
+          <h4>Information</h4>
+          <ul>
+            <li>About</li>
+            <li>Terms of service</li>
+            <li>Privacy policy</li>
+            <li>Delivery and return</li>
+          </ul>
+        </section>
+        <section>
+          <h4>Customer support</h4>
+          <ul>
+            <li>Contact</li>
+            <li>Help</li>
+            <li>FAQ</li>
+          </ul>
+        </section>
+      </div>
+      <div class="container footer-bottom">
+        <p>2024 Your Company. All rights reserved.</p>
+        <div class="social-icons">
+          <img src="images/instagram.png" alt="Instagram">
+          <img src="images/communication.png" alt="Facebook">
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>
